@@ -1,0 +1,11 @@
+deploy:
+	@echo "Packaging Lambda..."
+	zip -jr deploy/lambda.zip src/*
+	@echo "Deploying infrastructure..."
+	cd infra && terraform apply -auto-approve
+
+test:
+	pytest tests/ -v
+
+clean:
+	rm -rf deploy/*

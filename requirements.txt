@@ -1,0 +1,4 @@
+aioboto3>=9.4.0
+pydantic>=1.10.7
+pytest>=7.2.0
+aws-xray-sdk>=2.11.0
